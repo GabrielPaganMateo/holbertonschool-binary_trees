@@ -5,7 +5,7 @@
  * @value: value to store in right child
  * Return: pointer to rightchild or NULL on failur
  */
-binary_tree_insert_right(binary_tree_t *parent, int value)
+binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
 {
 	binary_tree_t *rightChild, *temp;
 
