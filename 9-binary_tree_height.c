@@ -2,6 +2,8 @@
 /**
  * binary_tree_height - measures the height of a binary tree
  * @tree: pointer to root node
+ * @right: right subtree height
+ * @left: left subtree height
  * Return: height amount
  */
 size_t findMax(size_t right, size_t left);
@@ -15,7 +17,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 		left = binary_tree_height(tree->left) + 1;
 	if (tree->right != NULL)
 		right = binary_tree_height(tree->right) + 1;
-	
+
 	height = findMax(right, left);
 
 	return (height);
