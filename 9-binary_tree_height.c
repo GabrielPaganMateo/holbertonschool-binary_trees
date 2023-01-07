@@ -24,9 +24,6 @@ size_t binary_tree_height(const binary_tree_t *tree)
 }
 /**
  * findMax - find heighest hight to return
- * @tree: pointer to root node
- * @right: right subtree height
- * @left: left subtree height
  * Return: tallest height
  */
 size_t findMax(size_t right, size_t left)
