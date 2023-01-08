@@ -21,6 +21,11 @@ int binary_tree_balance(const binary_tree_t *tree)
 	return (balance);
 
 }
+/**
+ * tree_height - find subtree height
+ * @tree: node
+ * Return: height
+ */
 size_t tree_height(const binary_tree_t *tree)
 {
 	size_t height = 0, right = 0, left = 0;
