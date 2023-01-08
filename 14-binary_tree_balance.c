@@ -7,7 +7,8 @@ size_t findMax(size_t right, size_t left);
  */
 int binary_tree_balance(const binary_tree_t *tree)
 {
-	int heightL = 0, heightR = 0, balance = 0;
+	int heightL = 0, heightR = 0;
+	static int balance = 0;
 
 	if (tree->right == NULL && tree->left == NULL)
 		return (0);
