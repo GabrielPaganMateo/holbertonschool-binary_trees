@@ -14,14 +14,12 @@ int binary_tree_balance(const binary_tree_t *tree)
 	if (tree == NULL)
 		return (0);
 
-	if (tree->left)
 	heightL = tree_height(tree->left);
-	if (tree->right)
 	heightR = tree_height(tree->right);
 
 	printf("heightL:%i heightR:%i\n", heightL, heightR);
 
-	balance = heightL - heightR;
+	balance = (heightL - heightR);
 	return (balance);
 
 }
@@ -31,10 +29,9 @@ size_t tree_height(const binary_tree_t *tree)
 
 	if (tree == NULL)
 		return (0);
-	if (tree->left)
-		left = tree_height(tree->left) + 1;
-	if (tree->right)
-		right = tree_height(tree->right) + 1;
+
+	left = tree_height(tree->left) + 1;
+	right = tree_height(tree->right) + 1;
 
 	height = findMax(right, left);
 
