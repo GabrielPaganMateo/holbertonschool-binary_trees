@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
+#include <stdbool.h>
 /**
  * struct binary_tree_s - Binary tree node
  *
@@ -60,4 +61,7 @@ size_t binary_tree_nodes(const binary_tree_t *tree);
 int binary_tree_balance(const binary_tree_t *tree);
 
 int binary_tree_is_full(const binary_tree_t *tree);
+
+int binary_tree_is_perfect(const binary_tree_t *tree);
+
 #endif
