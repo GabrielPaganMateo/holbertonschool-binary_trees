@@ -26,19 +26,11 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
  */
 size_t binary_tree_size(const binary_tree_t *tree)
 {
-	size_t size = 0;
 
 	if (tree == NULL)
 		return (0);
 
-	size += 1;
-
-	if (tree->left)
-		size += binary_tree_size(tree->left);
-	if (tree->right)
-		size += binary_tree_size(tree->right);
-
-	return (size);
+	return (binary_tree_size(tree->left) + binary_tree_size(tree->right) + 1);
 }
 size_t findMax(size_t right, size_t left);
 /**
@@ -48,29 +40,16 @@ size_t findMax(size_t right, size_t left);
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
-	size_t height, right, left;
+	size_t right, left;
 
 	if (tree == NULL)
 		return (0);
-	if (tree->left)
-		left = binary_tree_height(tree->left) + 1;
-	if (tree->right)
-		right = binary_tree_height(tree->right) + 1;
 
-	height = findMax(right, left);
+	left = binary_tree_height(tree->left) + 1;
+	right = binary_tree_height(tree->right) + 1;
 
-	return (height);
-}
-/**
- * findMax - find heighest hight to return
- * @right: right subtree
- * @left: left subtree
- * Return: tallest height
- */
-size_t findMax(size_t right, size_t left)
-{
 	if (right > left)
-		return (right);
+		return (right );
 	else
 		return (left);
 }
