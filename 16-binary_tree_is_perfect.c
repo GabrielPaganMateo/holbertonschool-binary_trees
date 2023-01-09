@@ -1,5 +1,4 @@
 #include "binary_trees.h"
-size_t findMax(size_t right, size_t left);
 size_t binary_tree_height(const binary_tree_t *tree);
 size_t binary_tree_size(const binary_tree_t *tree);
 /**
@@ -32,7 +31,6 @@ size_t binary_tree_size(const binary_tree_t *tree)
 
 	return (binary_tree_size(tree->left) + binary_tree_size(tree->right) + 1);
 }
-size_t findMax(size_t right, size_t left);
 /**
  * binary_tree_height - measures the height of a binary tree
  * @tree: pointer to root node
@@ -49,7 +47,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	right = binary_tree_height(tree->right) + 1;
 
 	if (right > left)
-		return (right );
+		return (right);
 	else
 		return (left);
 }
